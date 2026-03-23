@@ -4,7 +4,7 @@ import pandas as pd
 import math
 
 # --- CONFIGURATION ---
-API_KEY = '4958cf745a797fba779a495f54ec990b'
+API_KEY = st.secrets["api_key"]
 
 st.set_page_config(page_title="Surebet Scanner Pro", layout="wide")
 
