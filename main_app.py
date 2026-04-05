@@ -75,7 +75,7 @@ if st.button('🚀 Lancer le Scan Global (Toutes Ligues)'):
                                 for v1, v2, n1, n2, b1, b2 in combos:
                                     rendement = (1/v1) + (1/v2)
                                     
-                                    if rendement < -10.00: # On a un Surebet
+                                    if rendement < 1.10: # On a un Surebet
                                         m1_raw = (1/v1 / rendement) * mise_totale_cible
                                         m1 = max(arrondi, round(m1_raw / arrondi) * arrondi)
                                         m2_raw = (m1 * v1) / v2
@@ -85,7 +85,7 @@ if st.button('🚀 Lancer le Scan Global (Toutes Ligues)'):
                                         gain = min((m1 * v1) - total, (m2 * v2) - total)
                                         perc = (gain / total) * 100
 
-                                        if gain > -0.5: # On tolère un léger arrondi négatif
+                                        if gain > -5.00: # On tolère un léger arrondi négatif
                                             title = match['sport_title']
                                             # Emoji dynamique
                                             emoji = "🎾" if "Tennis" in title else "🏀" if "Basket" in title else "🏒" if "Hockey" in title else "🥊" if "MMA" in title else "🏐" if "Volley" in title else "🏓"
