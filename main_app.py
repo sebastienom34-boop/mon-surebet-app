@@ -74,4 +74,4 @@ if st.button('🚀 Scanner avec Mises Discrètes'):
             st.success(f"✅ {len(results)} opportunités trouvées !")
             st.table(pd.DataFrame(results))
         else:
-            st.info("Aucun profit détecté. Les cotes ARJEL sont très serrées !")
+            st.info("Aucun profit détecté. Les cotes ARJEL sont très serrées !") 
