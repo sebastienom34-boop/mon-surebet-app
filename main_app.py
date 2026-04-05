@@ -17,7 +17,8 @@ BOOKIES_FR = ['winamax', 'pmufr', 'unibet_fr', 'betclic_fr']
 
 if st.button('🚀 Scanner avec Mises Discrètes'):
     with st.spinner('Analyse et calcul des arrondis...'):
-        url = f'https://api.the-odds-api.com/v4/sports/upcoming/odds/?apiKey={API_KEY}&regions=eu&markets=h2h'
+        # On cible uniquement les ligues majeures (disponibles partout en France)
+url = f'https://api.the-odds-api.com/v4/sports/tennis_atp,tennis_wta,basketball_nba,basketball_euroleague/odds/?apiKey={API_KEY}&regions=eu&markets=h2h'
         response = requests.get(url)
         data = response.json()
         results = []
